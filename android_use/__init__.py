@@ -1,0 +1,3 @@
+from android_use.logging_config import setup_logging
+
+setup_logging()

@@ -1,0 +1,53 @@
+[project]
+name = "android-use"
+version = "0.1.0"
+description = "Make android accessible for AI agents"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "uiautomator2>=3.2.9",
+    "rich>=14.0.0",
+    "google-api-core>=2.25.0",
+    "httpx>=0.28.1",
+    "portalocker>=2.7.0,<3.0.0",
+    "posthog>=3.7.0",
+    "psutil>=7.0.0",
+    "pydantic>=2.11.5",
+    "pyobjc>=11.0; platform_system == 'darwin'",
+    "python-dotenv>=1.0.1",
+    "requests>=2.32.3",
+    "screeninfo>=0.8.1; platform_system != 'darwin'",
+    "typing-extensions>=4.12.2",
+    "uuid7>=0.1.0",
+    "authlib>=1.6.0",
+    "google-genai>=1.50.0,<2.0.0",
+    "openai>=2.7.2,<3.0.0",
+    "anthropic>=0.72.1,<1.0.0",
+    "groq>=0.30.0",
+    "ollama>=0.5.1",
+    "google-api-python-client>=2.174.0",
+    "google-auth>=2.40.3",
+    "google-auth-oauthlib>=1.2.2",
+    "mcp>=1.10.1",
+    "pypdf>=5.7.0",
+    "python-dotenv>=1.0.1",
+    "gradio>=5.23.3",
+    "apkutils2>=1.0.0",
+    "json-repair>=0.54.3",
+    "getmac>=0.9.5",
+]
+
+[project.scripts]
+android_use = "android_use.cli:main"
+android_use_webui = "android_use.app:main"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["android_use*"]
+exclude = ["tmp*", "tests*"]
+
+[tool.uv]
+package = true
