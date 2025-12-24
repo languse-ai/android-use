@@ -46,7 +46,7 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 #### Install android_use
 
 ```bash
-uv pip install android_use -U
+uvx android-use install
 ```
 
 #### Running the Application
@@ -54,7 +54,7 @@ uv pip install android_use -U
 **Option 1: WebUI (Recommended)**
 
 ```bash
-android_use_webui
+uvx android-use-webui
 ```
 
 <video controls src="https://github.com/user-attachments/assets/65d75067-b9d0-4b5a-a96e-eadf2d9a22e5" title="WebUI Demo"></video>
@@ -62,7 +62,7 @@ android_use_webui
 **Option 2: CLI (Interactive)**
 
 ```bash
-android_use
+uvx android-use
 ```
 
 #### Local Development

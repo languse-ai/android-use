@@ -38,8 +38,8 @@ dependencies = [
 ]
 
 [project.scripts]
-android_use = "android_use.cli:main"
-android_use_webui = "android_use.app:main"
+android-use = "android_use.cli:main"
+android-use-webui = "android_use.app:main"
 
 [build-system]
 requires = ["setuptools>=61.0", "wheel"]
