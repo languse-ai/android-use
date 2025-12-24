@@ -79,6 +79,9 @@ python -m android_use.cli
 python -m android_use.app
 ```
 
+## ⚠️ Disclaimer
+⚠️ This project is for research and study purposes only. It is strictly prohibited to use it for illegal information acquisition, system interference, or any illegal activities. Please review the [Terms of Use](./privacy_policy_en.txt) carefully.
+
 ## 📺 Demos
 
 Here are three demos showcasing the capabilities:
@@ -86,12 +89,12 @@ Here are three demos showcasing the capabilities:
 ### 1. WeChat Video Account Interaction
 **Task**: Open WeChat, search for "Doubao Phone" in Video Accounts, get all comments from the most liked video on the current page, share this video with a friend, and send a summary of the comments.
 
-<video controls src="https://github.com/user-attachments/assets/65d75067-b9d0-4b5a-a96e-eadf2d9a22e5" title="WeChat Demo"></video>
+<video controls src="https://github.com/user-attachments/assets/8f51e56c-16e7-405f-840b-ab8db68bebaa" title="WeChat Demo"></video>
 
 ### 2. Douyin E-commerce Data Scraping
 **Task**: Open Douyin, search for "Anta Basketball Shoes" in the shop, and retrieve information for the top 10 products.
 
-<video controls src="https://github.com/user-attachments/assets/8f51e56c-16e7-405f-840b-ab8db68bebaa" title="Douyin Demo"></video>
+<video controls src="https://github.com/user-attachments/assets/18fdfc82-5cc2-42ca-b1ab-f8e93aef6c60" title="Douyin Demo"></video>
 
 ### 3. Xiaohongshu Interaction
 **Task**: Open Xiaohongshu, search for "browser-use", select the most liked post on the current page, like it, leave a concise, human-like comment, and summarize the core content of the post.

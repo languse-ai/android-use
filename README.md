@@ -79,6 +79,9 @@ python -m android_use.cli
 python -m android_use.app
 ```
 
+## ⚠️ 免责声明
+⚠️ 本项目仅供研究和学习使用。严禁用于非法获取信息、干扰系统或任何违法活动。请仔细审阅 [使用条款](./privacy_policy.txt)。
+
 ## 📺 演示案例 (Demos)
 
 以下是三个典型的自动化场景演示：
@@ -86,12 +89,12 @@ python -m android_use.app
 ### 1. 微信视频号互动与分享
 **任务描述**：打开微信，进入视频号搜索“豆包手机”，获取当前页面点赞数最多的视频的所有评论，将该视频分享给好友，并发送一段总结性的评论内容。
 
-<video controls src="https://github.com/user-attachments/assets/65d75067-b9d0-4b5a-a96e-eadf2d9a22e5" title="WeChat Demo"></video>
+<video controls src="https://github.com/user-attachments/assets/8f51e56c-16e7-405f-840b-ab8db68bebaa" title="WeChat Demo"></video>
 
 ### 2. 抖音电商数据抓取
 **任务描述**：打开抖音，进入商城搜索“安踏篮球鞋”，获取并整理排名前 10 的商品信息。
 
-<video controls src="https://github.com/user-attachments/assets/8f51e56c-16e7-405f-840b-ab8db68bebaa" title="Douyin Demo"></video>
+<video controls src="" title="Douyin Demo">https://github.com/user-attachments/assets/18fdfc82-5cc2-42ca-b1ab-f8e93aef6c60</video>
 
 ### 3. 小红书自动互动
 **任务描述**：打开小红书，搜索“browser-use”，选择当前页面点赞数最多的帖子，进行点赞并发表一条像真人一样的简洁评论，最后总结该帖子的核心内容。
