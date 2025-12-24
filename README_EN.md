@@ -94,7 +94,7 @@ Here are three demos showcasing the capabilities:
 ### 2. Douyin E-commerce Data Scraping
 **Task**: Open Douyin, search for "Anta Basketball Shoes" in the shop, and retrieve information for the top 10 products.
 
-<video controls src="https://github.com/user-attachments/assets/18fdfc82-5cc2-42ca-b1ab-f8e93aef6c60" title="Douyin Demo"></video>
+<video controls src="https://github.com/user-attachments/assets/18fdfc82-5cc2-42ca-b1ab-f8e93aef6c60" title="WeChat Demo"></video>
 
 ### 3. Xiaohongshu Interaction
 **Task**: Open Xiaohongshu, search for "browser-use", select the most liked post on the current page, like it, leave a concise, human-like comment, and summarize the core content of the post.

@@ -94,7 +94,7 @@ python -m android_use.app
 ### 2. 抖音电商数据抓取
 **任务描述**：打开抖音，进入商城搜索“安踏篮球鞋”，获取并整理排名前 10 的商品信息。
 
-<video controls src="" title="Douyin Demo">https://github.com/user-attachments/assets/18fdfc82-5cc2-42ca-b1ab-f8e93aef6c60</video>
+<video controls src="https://github.com/user-attachments/assets/18fdfc82-5cc2-42ca-b1ab-f8e93aef6c60" title="WeChat Demo"></video>
 
 ### 3. 小红书自动互动
 **任务描述**：打开小红书，搜索“browser-use”，选择当前页面点赞数最多的帖子，进行点赞并发表一条像真人一样的简洁评论，最后总结该帖子的核心内容。
