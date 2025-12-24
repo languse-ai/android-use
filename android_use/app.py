@@ -79,7 +79,9 @@ class AndroidUseWebUI:
     def get_device_list(self) -> List[str]:
         """Get list of available Android devices"""
         try:
-            android_devices = adbutils.adb.device_list()
+            # Use a local client with a timeout to avoid hanging if ADB is unresponsive
+            client = adbutils.AdbClient(socket_timeout=3.0)
+            android_devices = client.device_list()
             return [device.serial for device in android_devices]
         except Exception as e:
             print(f"Error getting device list: {e}")
