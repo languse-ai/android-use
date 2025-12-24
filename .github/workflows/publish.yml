@@ -1,0 +1,44 @@
+name: Publish Python Package
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install build toml
+
+    - name: Update Version from Release Tag
+      if: github.event_name == 'release'
+      run: |
+        # Get release tag from GitHub context
+        RELEASE_TAG="${{ github.event.release.tag_name }}"
+        
+        # Remove 'v' prefix if present
+        VERSION=$(echo "$RELEASE_TAG" | sed 's/^v//')
+        echo "Using release tag version: $VERSION"
+        
+        # Update pyproject.toml version
+        python -c "import toml; import sys; data = toml.load('pyproject.toml'); data['project']['version'] = sys.argv[1]; f = open('pyproject.toml', 'w'); toml.dump(data, f); f.close(); print(f'Updated pyproject.toml version to {sys.argv[1]}')" "$VERSION"
+
+    - name: Build package
+      run: python -m build
+
+    - name: Publish to PyPI
+      uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        password: ${{ secrets.PYPI_API_TOKEN }}
