@@ -640,6 +640,14 @@ class AndroidUseCLI:
 
 def main():
     """Entry point for the CLI"""
+    # Check if webui mode is requested
+    if len(sys.argv) > 1 and sys.argv[1] == "webui":
+        from android_use import app
+        # Remove 'webui' from arguments so it doesn't interfere with app's argument parsing
+        sys.argv.pop(1)
+        app.main()
+        return
+
     try:
         cli = AndroidUseCLI()
         asyncio.run(cli.main_loop())
