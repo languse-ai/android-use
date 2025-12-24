@@ -70,7 +70,7 @@ uv sync
 # 启动 CLI
 python -m android_use.cli
 # 启动 WebUI
-python -m android_use.cli webui
+python -m android_use.app
 ```
 
 ## ⚠️ 免责声明
