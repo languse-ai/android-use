@@ -70,8 +70,8 @@ uvx android-use
 If you want to contribute or develop locally:
 
 ```bash
-git clone https://github.com/YourUsername/android_use.git
-cd android_use
+git clone https://github.com/languse-ai/android-use
+cd android-use
 uv sync
 # Start CLI
 python -m android_use.cli

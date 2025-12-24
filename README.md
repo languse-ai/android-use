@@ -70,8 +70,8 @@ uvx android-use
 如果您希望参与开发或进行本地调试：
 
 ```bash
-git clone https://github.com/YourUsername/android_use.git
-cd android_use
+git clone https://github.com/languse-ai/android-use
+cd android-use
 uv sync
 # 启动 CLI
 python -m android_use.cli
