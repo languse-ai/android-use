@@ -43,18 +43,12 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 
 ### 3. Setup Environment
 
-#### Install android_use
-
-```bash
-uvx android-use install
-```
-
 #### Running the Application
 
 **Option 1: WebUI (Recommended)**
 
 ```bash
-uvx android-use-webui
+uvx android-use webui
 ```
 
 <video controls src="https://github.com/user-attachments/assets/65d75067-b9d0-4b5a-a96e-eadf2d9a22e5" title="WebUI Demo"></video>

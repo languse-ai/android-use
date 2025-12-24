@@ -35,6 +35,7 @@ dependencies = [
     "apkutils2>=1.0.0",
     "json-repair>=0.54.3",
     "getmac>=0.9.5",
+    "scikit-image==0.26.0"
 ]
 
 [project.scripts]

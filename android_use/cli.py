@@ -70,7 +70,9 @@ class AndroidUseCLI:
         console.print("[bold yellow]📱 Selecting Android Device...[/bold yellow]\n")
         
         try:
-            android_devices = adbutils.adb.device_list()
+            # Use a local client with a timeout to avoid hanging if ADB is unresponsive
+            client = adbutils.AdbClient(socket_timeout=3.0)
+            android_devices = client.device_list()
         except Exception as e:
             console.print(f"[bold red]❌ Error getting device list: {e}[/bold red]")
             return None
