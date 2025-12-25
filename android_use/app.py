@@ -780,6 +780,7 @@ def main():
     parser = argparse.ArgumentParser(description="Android Use Agent WebUI")
     parser.add_argument("--host", type=str, default="127.0.0.1", help="Host to bind the server to")
     parser.add_argument("--port", type=int, default=7860, help="Port to bind the server to")
+    parser.add_argument("--no-browser", action="store_true", help="Do not open browser automatically")
     args = parser.parse_args()
 
     print("🚀 Starting Android Use Agent WebUI...")
@@ -795,6 +796,7 @@ def main():
         server_port=args.port,
         share=False,
         show_error=True,
+        inbrowser=not args.no_browser,
         theme=gr.themes.Ocean(),
         allowed_paths=[
             webui.outputs_dir,
