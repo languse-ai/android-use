@@ -123,6 +123,13 @@ class AndroidUseAgent:
         # Signal pause event to unblock any waiting code so it can check the stopped state
         self._external_pause_event.set()
 
+    def reset(self) -> None:
+        """Reset the agent state for a new run"""
+        self.state = AgentState()
+        self._external_pause_event.set()
+        self.task = ""
+
+
     async def run(self, task: str, max_steps: int = 100, **kwargs) -> AgentHistoryList:
         """
         Run the Android automation agent.
@@ -395,6 +402,8 @@ class AndroidUseAgent:
                     text=f"Error occurred: {str(e)}. Please try a different approach."
                 )
                 self.message_manager.add_message(error_message)
+            finally:
+                self.reset()
 
         # Generate GIF if requested
         if self.agent_settings.generate_gif:
@@ -437,7 +446,6 @@ class AndroidUseAgent:
 
         # Unregister signal handler when done
         signal_handler.unregister()
-
         logger.info(f"\nAgent completed after {self.state.n_steps} steps")
         logger.info(f"Total duration: {self.state.history.total_duration_seconds():.2f} seconds")
         logger.info(f"Total input tokens: {self.state.history.total_input_tokens()}")

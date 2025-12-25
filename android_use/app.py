@@ -668,8 +668,13 @@ class AndroidUseWebUI:
                 self.chat_history = []
                 self.current_screenshot = None
                 self.current_gif_path = None
-                if self.agent and hasattr(self.agent, 'message_manager'):
-                    self.agent.message_manager.clear_message_history()
+                if self.agent:
+                    if hasattr(self.agent, 'message_manager'):
+                        self.agent.message_manager.clear_message_history()
+                    # Reset agent state for fresh start
+                    if hasattr(self.agent, 'reset'):
+                        self.agent.reset()
+                        
                 return [], gr.update(value=None, visible=True)
             
             send_btn.click(
